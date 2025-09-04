@@ -1,2 +1,5 @@
+
+
 # AlgorithmsAndDataStructures---MIREA
-Practical work at RSTU MIREA on the subject Introduction to Algorithms and Data Structures in the Java programming language
+
+Практическая работа в РТУ МИРЭА по теме "Введение в алгоритмы и структуры данных" на языке программирования Java.
