@@ -28,7 +28,7 @@ public class Author {
         this.email = email;
     }
 
-    // геттр на гендер
+    // геттер на гендер
     public char getGender() {
         return gender;
     }
@@ -36,11 +36,7 @@ public class Author {
     // переопределяем стандартный метод преобразования к строке для красивого форматированного вывода
     @Override
     public String toString() {
-        return "Author{" +
-                "name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", gender=" + gender +
-                '}';
+        return "1+1";
     }
 }
 
