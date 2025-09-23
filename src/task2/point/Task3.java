@@ -1,8 +1,9 @@
 package task2.point;
+
 import java.util.Scanner;
 
 public class Task3 {
-    
+
     private Circle[] circles;
     private int numberOfCircles;
 
@@ -24,12 +25,14 @@ public class Task3 {
         for (int i = 0; i < numberOfCircles; i++) {
             System.out.println("Окружность " + (i + 1) + ":");
 
-            System.out.println("\tЦентр: (" + circles[i].getCenter().getX() + ", " + circles[i].getCenter().getY() + ")");
+            System.out
+                    .println("\tЦентр: (" + circles[i].getCenter().getX() + ", " + circles[i].getCenter().getY() + ")");
             System.out.println("\tРадиус: " + circles[i].getRadius());
-            System.out.println("\tПериметр: "+Math.round(circles[i].Perimeter(circles[i].getRadius())));
-            System.out.println("\tПлощадь: "+ Math.round((circles[i].Square(circles[i].getRadius()))));
+            System.out.println("\tПериметр: " + Math.round(circles[i].Perimeter(circles[i].getRadius())));
+            System.out.println("\tПлощадь: " + Math.round((circles[i].Square(circles[i].getRadius()))));
         }
     }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -37,13 +40,22 @@ public class Task3 {
         int x = scan.nextInt();
 
         Task3 tester = new Task3(x);
-        Point center = new Point(1,1);
-        Circle circleRad3 = new Circle(center,3);
-        Point centerNew = new Point(4,1);
-        Circle circleRad7 = new Circle(centerNew,7);
 
-        tester.addCircle(circleRad3);
-        tester.addCircle(circleRad7);
+        for (int i = 0; i < x; i++) {
+            System.out.println("Для №" + (i + 1));
+            System.out.print("\tВведите координату X: ");
+            int cord_x = scan.nextInt();
+            // System.out.print("\n");
+            System.out.print("\tВведите координату Y: ");
+            int cord_y = scan.nextInt();
+            System.out.print("\tВведите радиус окружности: ");
+            int radius = scan.nextInt();
+
+            Point center = new Point(cord_x, cord_y);
+            Circle circleObject = new Circle(center, radius);
+            tester.addCircle(circleObject);
+
+        }
         tester.displayCircles();
 
         scan.close();
